@@ -32,10 +32,12 @@ def welcome():
 @app.route('/home')
 def home():
     cafe_detail = db.session.query(Cafe).all()
-    
     # print(cafe_detail)
     return render_template("home.html", all_cafes=cafe_detail)
 
+@app.route("/cities")
+def cities():
+    return render_template("cities.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

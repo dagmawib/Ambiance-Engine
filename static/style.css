@@ -17,13 +17,18 @@ body{
 .navbar-toggler{
     background-color: white;
 }
+.Filters{
+    min-height: 100vh;
+}
 .Filters #left {
-    height: 700px; /* Set the height of the aside */
-    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 700px; 
+    min-height: 100vh;
+    overflow-y: auto; 
     width: 25rem;
   }
 .parent .Cafes{
-    height: 700px;
+    max-height: 700px;
+    min-height: 100vh;
     overflow-y: scroll;
 }
 .Filters #left .filter-img{
@@ -41,6 +46,18 @@ body{
 .Filters #left h4{
     margin: 15px;
     font-family: "Roboto Slab", serif;
+}
+@media only screen and (min-width: 1024px) {
+    .Filters {
+        width: 60%; 
+        
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .Filters {
+        width: 40%; 
+        
+    }
 }
 .parent{
     display: flex;
@@ -217,9 +234,8 @@ body{
     justify-content: center;
   }
 .person1 {
-    /* flex: 1 0 auto; Makes divs equally sized and grow if needed */
-    padding: 1rem; /* Add some padding for better spacing */
-    margin-right: 1rem; /* Add margin for spacing between divs (except last one) */
+    padding: 1rem; 
+    margin-right: 1rem; 
 }
 .person1:last-child {
     margin-right: 20px; /* Remove margin for the last div */
@@ -356,4 +372,33 @@ body{
 .wrraper .telegram:hover .tooltip::before{
     background: #362FD9;
     color: #fff;
+}
+/* /////////////////////Cities Page///////////////////// */
+.citiesPage{
+    text-align: center;
+    /* display: inline; */
+}
+.citiesPage h2{
+    margin-top: 3rem;
+    font-family: "Sedan", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 4rem;
+}
+.citiesPage h3{
+    font-family: "Sedan", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3rem;
+    margin-top: 0;
+}
+.citiesPage ul{
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    display: flow-root;
+}
+.citiesPage button{
+    padding: 10px;
+    margin: 7px;
 }
