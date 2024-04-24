@@ -30,20 +30,19 @@ def welcome():
 
 @app.route('/home')
 def home():
-    filters = {}
-    if request.args.get('wifi'):
-        filters['has_wifi'] = True
-    if request.args.get('sockets'):
-        filters['has_sockets'] = True
-    if request.args.get('calls'):
-        filters['can_take_calls'] = True
+    all_cafes = db.session.query(Cafe).all()
+    filters = request.args.to_dict()
     
-    if not filters:  # No filters applied, fetch all cafes
-        cafe_detail = db.session.query(Cafe).all()
-    else:
-        cafe_detail = db.session.query(Cafe).filter_by(**filters).all()
+    if 'wifi' in filters:
+        all_cafes = [cafe for cafe in all_cafes if cafe.has_wifi]
+    if 'sockets' in filters:
+        all_cafes = [cafe for cafe in all_cafes if cafe.has_sockets]
+    if 'calls' in filters:
+        all_cafes = [cafe for cafe in all_cafes if cafe.can_take_calls]
 
-    return render_template("home.html", all_cafes=cafe_detail)
+    remaining_count = len(all_cafes)
+    return render_template("home.html", all_cafes=all_cafes, remaining_count=remaining_count)
+
 
 @app.route("/cities")
 def cities():
