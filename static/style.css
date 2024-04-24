@@ -24,7 +24,7 @@ body{
     max-height: 700px; 
     min-height: 100vh;
     overflow-y: auto; 
-    width: 25rem;
+    width: 24rem;
   }
 .parent .Cafes{
     max-height: 700px;
@@ -83,14 +83,23 @@ body{
     /* width: 900%; */
 }
 /* /////////////////////////Cafe Detail////////////////////////// */
-.cafe_detail .cafe_image{
-    width: 250px;
-    margin-top: 15px;
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
 }
-.cafe_detail .detail_text{
-    float: right;
-    margin-right: 8rem;
+
+.grid-items img{
+    border-radius: 10px;
 }
+
+.grid-items p{
+   font-size: 10px;
+   margin-bottom: 5px; 
+}
+
 /* ///////////////////////////Landing Page///////////////////////////// */
 .LandingPage {
     background-image: url(/static/images/99-films-yr9l_xQPDL0-unsplash.jpg);

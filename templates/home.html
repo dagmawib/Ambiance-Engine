@@ -84,21 +84,21 @@
     </div>
     </section>
     <section class="Cafes"> 
-            <div id="right">
-                <h2>Ethiopia</h2>
-                <p>The best work and study-friendly cafes, retaurants, libraries and hotel loobbies in Ethiopia. Find venues with free and reliable WI-FI htspots, ample power sockets and comfy seaating areas.</p>
-                <h4>273 WORK-FRIENDLY PLACES</h4>
-                <div class="cafe_detail">
-                  {% for cafe in all_cafes %}
-                     <img src="{{cafe.img_url}}" alt="" class="cafe_image">
-                     <div class="detail_text">
-                     <p class="Name">{{cafe.name}}</p>
-                     <p class="Time"></p>
-                     <p class="Location">{{cafe.location}}</p>
-                    </div>
-                  {%endfor%}
-                </div>
-            </div>
+      <h2>Ethiopia</h2>
+      <p>The best work and study-friendly cafes, retaurants, libraries and hotel loobbies in Ethiopia. Find venues with free and reliable WI-FI htspots, ample power sockets and comfy seaating areas.</p>
+      <h4>273 WORK-FRIENDLY PLACES</h4>
+      <div class="grid-container">
+        {% for cafe in all_cafes %}
+        <div class="grid-items">
+            <img src="{{cafe.img_url}}" alt="" class="cafe_image" height="150" width="150" />
+        </div>
+        <div class="grid-items">
+            <p>{{cafe.name}}</p>
+            <p>{{cafe.location}}</p>
+        </div>
+        {% endfor %}
+    </div>
+     
     </section>
     <section class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252230.0202932407!2d38.613331156536525!3d8.963479537369786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1712741100715!5m2!1sen!2set" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

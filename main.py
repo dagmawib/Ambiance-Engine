@@ -24,7 +24,6 @@ class Cafe(db.Model):
 with app.app_context():
     db.create_all()
 
-cafe_detail = []
 @app.route('/')
 def welcome():
     return render_template("welcome.html")
@@ -32,7 +31,6 @@ def welcome():
 @app.route('/home')
 def home():
     cafe_detail = db.session.query(Cafe).all()
-    # print(cafe_detail)
     return render_template("home.html", all_cafes=cafe_detail)
 
 @app.route("/cities")
