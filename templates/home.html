@@ -49,9 +49,9 @@
             </div>
             <div class="Productivity">
                 <h4>PRODUCTIVITY</h4>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('wifi') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('wifi')">Wi-Fi</button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('sockets') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('sockets')">Socket</button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('calls') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('calls')">Calls</button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('wifi') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('wifi')"><span><img src="/static/filter-images/wifi.png" alt="" class="filter-img"><br>Wi Fi</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('sockets') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('sockets')"><span><img src="/static/filter-images/plug.png" alt="" class="filter-img"><br>Socket</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('calls') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('calls')"><span><img src="/static/filter-images/telephone-call.png" alt="" class="filter-img"><br>Calls</span></button>
                 
                 <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/stay-at-home.png" alt="" class="filter-img"><br>Long stays</span></button>
                 <button type="button" class="btn btn-outline-dark btn-sm border-0"><span> <img src="/static/filter-images/table.png" alt="" class="filter-img"><br>Tables</span></button>
