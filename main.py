@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template , request
 from flask_sqlalchemy import SQLAlchemy
 import csv
 app = Flask(__name__)
@@ -30,7 +30,19 @@ def welcome():
 
 @app.route('/home')
 def home():
-    cafe_detail = db.session.query(Cafe).all()
+    filters = {}
+    if request.args.get('wifi'):
+        filters['has_wifi'] = True
+    if request.args.get('sockets'):
+        filters['has_sockets'] = True
+    if request.args.get('calls'):
+        filters['can_take_calls'] = True
+    
+    if not filters:  # No filters applied, fetch all cafes
+        cafe_detail = db.session.query(Cafe).all()
+    else:
+        cafe_detail = db.session.query(Cafe).filter_by(**filters).all()
+
     return render_template("home.html", all_cafes=cafe_detail)
 
 @app.route("/cities")

@@ -14,6 +14,18 @@ body{
 .navbar-collapse .nav-item .nav-link{
     color: aliceblue;
 }
+/* Selected button style */
+.btn-selected {
+    background-color: #007bff; /* Blue color as an example */
+    color: #fff; /* White text color */
+}
+
+/* Unselected button style */
+.btn-unselected {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #000; /* Black text color */
+}
+
 .navbar-toggler{
     background-color: white;
 }
