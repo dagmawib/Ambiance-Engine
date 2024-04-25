@@ -15,33 +15,33 @@
                 <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('sockets') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('sockets')"><span><img src="/static/filter-images/plug.png" alt="" class="filter-img"><br>Socket</span></button>
                 <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('calls') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('calls')"><span><img src="/static/filter-images/telephone-call.png" alt="" class="filter-img"><br>Calls</span></button>
                 
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/stay-at-home.png" alt="" class="filter-img"><br>Long stays</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span> <img src="/static/filter-images/table.png" alt="" class="filter-img"><br>Tables</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/no-shouting.png" alt="" class="filter-img"><br>Quiet</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('longStay') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('longStay')"><span><img src="/static/filter-images/stay-at-home.png" alt="" class="filter-img"><br>Long stays</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('tables') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('tables')"><span> <img src="/static/filter-images/table.png" alt="" class="filter-img"><br>Tables</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('quite') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('quite')"><span><img src="/static/filter-images/no-shouting.png" alt="" class="filter-img"><br>Quiet</span></button>
             </div>
             <div class="Community">
                 <h4>COMMUNITY</h4>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/volunteer.png" alt="" class="filter-img"><br>Work Vibe</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/meeting.png" alt="" class="filter-img"><br>Groups</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('workVibe') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('workVibe')"><span><img src="/static/filter-images/volunteer.png" alt="" class="filter-img"><br>Work Vibe</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('group') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('group')"><span><img src="/static/filter-images/meeting.png" alt="" class="filter-img"><br>Groups</span></button>
             </div>
             <div class="Service">
                 <H4>SERVICE</H4>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/latte-art.png" alt="" class="filter-img"><br>Coffe</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/burger.png" alt="" class="filter-img"><br>Food</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/vegan.png" alt="" class="filter-img"><br>Veggie</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/liquor.png" alt="" class="filter-img"><br>Alcohol</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/atm-card.png" alt="" class="filter-img"><br>Cards</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('coffee') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('coffee')"><span><img src="/static/filter-images/latte-art.png" alt="" class="filter-img"><br>Coffe</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('food') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('food')"><span><img src="/static/filter-images/burger.png" alt="" class="filter-img"><br>Food</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('veggie') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('veggie')"><span><img src="/static/filter-images/vegan.png" alt="" class="filter-img"><br>Veggie</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('alcohol') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('alcohol')"><span><img src="/static/filter-images/liquor.png" alt="" class="filter-img"><br>Alcohol</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('cards') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('cards')"><span><img src="/static/filter-images/atm-card.png" alt="" class="filter-img"><br>Cards</span></button>
             </div>
             <div class="Space">
                 <h4>SPACE</h4>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/idea.png" alt="" class="filter-img"><br>Light</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/park.png" alt="" class="filter-img"><br>Outdoor</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/pharmacy.png" alt="" class="filter-img"><br>Spacious</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/toilet-.png" alt="" class="filter-img"><br>Restroom</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/toilet.png" alt="" class="filter-img"><br>Accessible</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/air-conditioner.png" alt="" class="filter-img"><br>A/C</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/pets.png" alt="" class="filter-img"><br>Pets</span></button>
-                <button type="button" class="btn btn-outline-dark btn-sm border-0"><span><img src="/static/filter-images/car-parking.png" alt="" class="filter-img"><br>Parking</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('lights') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('lights')"><span><img src="/static/filter-images/idea.png" alt="" class="filter-img"><br>Light</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('outdoor') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('outdoor')"><span><img src="/static/filter-images/park.png" alt="" class="filter-img"><br>Outdoor</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('spacious') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('spacious')"><span><img src="/static/filter-images/pharmacy.png" alt="" class="filter-img"><br>Spacious</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('restroom') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('restroom')"><span><img src="/static/filter-images/toilet-.png" alt="" class="filter-img"><br>Restroom</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('accessible') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('accessible')"><span><img src="/static/filter-images/toilet.png" alt="" class="filter-img"><br>Accessible</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('ac') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('ac')"><span><img src="/static/filter-images/air-conditioner.png" alt="" class="filter-img"><br>A/C</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('pets') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('pets')"><span><img src="/static/filter-images/pets.png" alt="" class="filter-img"><br>Pets</span></button>
+                <button type="button" class="btn btn-outline-dark btn-sm border-0 {% if request.args.get('parking') %}btn-selected{% else %}btn-unselected{% endif %}" onclick="toggleFilter('parking')"><span><img src="/static/filter-images/car-parking.png" alt="" class="filter-img"><br>Parking</span></button>
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@
     <section class="Cafes"> 
       <h2>Ethiopia</h2>
       <p>The best work and study-friendly cafes, retaurants, libraries and hotel loobbies in Ethiopia. Find venues with free and reliable WI-FI htspots, ample power sockets and comfy seaating areas.</p>
-      <h4>{{ remaining_count }} / {{ all_cafes|length }} WORK-FRIENDLY PLACES</h4>
+      <h4>{{ remaining_count }} / {{ total_count }} WORK-FRIENDLY PLACES</h4>
 
       <div class="grid-container">
         {% for cafe in all_cafes %}
