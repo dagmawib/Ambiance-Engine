@@ -41,16 +41,15 @@ def home():
         all_cafes = [cafe for cafe in all_cafes if cafe.can_take_calls]
 
     remaining_count = len(all_cafes)
-    return render_template("home.html", all_cafes=all_cafes, remaining_count=remaining_count)
+    return render_template("home.html", all_cafes=all_cafes, remaining_count=remaining_count , page = 'home' )
 
 
 @app.route("/cities")
 def cities():
     return render_template("cities.html")
 
-@app.route("/suggest")
-def suggestion():
-    return render_template("suggestion.html")
-
+@app.route('/suggestions')
+def all_suggestion():
+   return render_template('suggestion.html')
 if __name__ == "__main__":
     app.run(debug=True)
