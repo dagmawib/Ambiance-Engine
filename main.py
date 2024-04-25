@@ -14,12 +14,28 @@ class Cafe(db.Model):
     map_url= db.Column(db.String(250))
     img_url = db.Column(db.String(250))
     location = db.Column(db.String(250))
+    seats = db.Column(db.Boolean)
+    coffee_price = db.Column(db.Integer)
     has_sockets = db.Column(db.Boolean)
     has_toilet = db.Column(db.Boolean)
     has_wifi = db.Column(db.Boolean)
     can_take_calls = db.Column(db.Boolean)
-    seats = db.Column(db.Integer)
-    coffee_price = db.Column(db.Integer)
+    can_stay_long = db.Column(db.Boolean)
+    is_quite = db.Column(db.Boolean)
+    work_vibe = db.Column(db.Boolean)
+    work_with_group = db.Column(db.Boolean)
+    has_coffee = db.Column(db.Boolean)
+    has_food = db.Column(db.Boolean)
+    has_veggie = db.Column(db.Boolean)
+    has_alcohol = db.Column(db.Boolean)
+    accept_card = db.Column(db.Boolean)
+    nice_lights = db.Column(db.Boolean)
+    has_outdoor = db.Column(db.Boolean)
+    is_spaciou = db.Column(db.Boolean)
+    is_accessible = db.Column(db.Boolean)
+    has_AC = db.Column(db.Boolean)
+    pets_allowed = db.Column(db.Boolean)
+    has_parking = db.Column(db.Boolean)
 
 with app.app_context():
     db.create_all()
@@ -51,5 +67,6 @@ def cities():
 @app.route('/suggestions')
 def all_suggestion():
    return render_template('suggestion.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
