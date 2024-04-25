@@ -48,5 +48,9 @@ def home():
 def cities():
     return render_template("cities.html")
 
+@app.route("/suggest")
+def suggestion():
+    return render_template("suggestion.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

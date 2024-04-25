@@ -425,3 +425,36 @@ body{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     border: 2px solid #333;
 }
+
+/* ///////////////Suggestions place//////////////////// */
+.suggestion-intro{
+    margin: 3rem 25rem 3rem 10rem;
+    position: absolute;
+    /* display: grid; */
+}
+.suggestion-intro h2{
+    font-family: "Sedan", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+}
+.suggestion-intro p{
+    font-size: 25px;
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.suggestion-intro .suggestion-area{
+    margin: 1rem 2rem;
+    padding: 5px;
+    font-size: 25px;
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.suggestion-area input{
+    width: 100%;
+    margin-left: 2rem;
+    border-radius: 5px;
+    background-color: #DDDDDD;
+}

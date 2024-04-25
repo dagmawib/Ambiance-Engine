@@ -25,7 +25,7 @@
                     <a class="nav-link" href="{{ url_for('cities')}}">All Cities</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Suggested Place</a>
+                    <a class="nav-link" href="{{url_for('suggestion')}}">Suggested Place</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Join Community</a>
@@ -40,7 +40,7 @@
         
         <h1>CO-WORK <br>EVERYWHERE</h1>
         <p>From coffee shops to hotel lobbies, discover everyday places to <br> work and connect.</p>
-        <button type="button" class="btn btn-warning btn-lg">EXPLORE CITIES</button>
+        <a href="{{url_for('cities')}}"><button type="button" class="btn btn-warning btn-lg">EXPLORE CITIES</button></a>
         <P>Noting listed in your area</P>
         <p><a href="">Suggest a laptop friendly place now!</a></p>
     </div>
