@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/style.css">
     {%if page == 'home'%}
       <title>{{ total_count }} WORK-FRIENDLY PLACES</title>
@@ -18,7 +19,7 @@
     <section class="NAVBAR">
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="/static/images/letter-t-.png" alt="logo" class="LOGO-Img"></a>
+              <a class="navbar-brand" href="{{url_for('welcome')}}"><img src="/static/images/letter-t-.png" alt="logo" class="LOGO-Img"></a>
               <button class="navbar-toggler navbar-toggler-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -34,7 +35,7 @@
                     <a class="nav-link" href="{{url_for('all_suggestion')}}">Suggested Place</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Join Community</a>
+                    <a class="nav-link" href="{{url_for('login')}}">Join Community</a>
                   </li>
                 </ul>
               </div>

@@ -95,7 +95,6 @@ def home():
     remaining_count = len(all_cafes)
     return render_template("home.html", all_cafes=all_cafes, total_count = total_count,remaining_count=remaining_count , page = 'home' )
 
-
 @app.route("/cities")
 def cities():
     return render_template("cities.html")
@@ -103,6 +102,11 @@ def cities():
 @app.route('/suggestions')
 def all_suggestion():
    return render_template('suggestion.html')
-
+@app.route('/login')
+def login():
+    return render_template('login.html')
+@app.route('/signup')
+def signUp():
+    return render_template('signUp.html')
 if __name__ == "__main__":
     app.run(debug=True)

@@ -302,10 +302,9 @@ body{
 /* ////////////////////////////Footer////////////////////// */
 .Footers{
     text-align: center;
-    justify-content: center;
-    align-items: center;
     background-color: #31363F;
-    margin-bottom: -20px;
+    margin-top: 20px;
+    
 }
 .Footers p{
     font-size: 22px;
@@ -457,4 +456,182 @@ body{
     margin-left: 2rem;
     border-radius: 5px;
     background-color: #DDDDDD;
+}
+/* ////////////////////Login & SignUp page/////////////// */
+.login_container .log_col{
+    color: #fff;
+    font-family: 'Young Serif', serif;
+}
+.login_container .center p{
+    margin-top: 20px;
+    padding: auto;
+    font-family: 'Sacramento', cursive;
+    font-weight: bold;
+}
+.login_container .center{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #222831;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.5);
+  }
+  .login_container .center h1{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #fff;
+  }
+  .login_container .center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  .login_container .center form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+   
+  }
+  .login_container .txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #fff;
+  }
+  .login_container .txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #fff;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .login_container .txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #0C0C0C;
+    transition: .5s;
+  }
+  .login_container .txt_field input:focus ~ label,
+  .login_container .txt_field input:valid ~ label{
+    top: -5px;
+    color: #fff;
+  }
+  .login_container .txt_field input:focus ~ span::before,
+  .login_container .txt_field input:valid ~ span::before{
+    width: 100%;
+  }
+  .login_container .pass{
+    margin: -5px 0 20px 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .login_container .pass:hover{
+    text-decoration: underline;
+  }
+  .login_container .center input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #0C0C0C;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  .login_container .center input[type="submit"]:hover{
+    border-color: #2691d9;
+    transition: .5s;
+  }
+  .login_container .signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+  }
+  .login_container .signup_link a{
+    color: #fff;
+    text-decoration: none;
+  }
+  .login_container .signup_link a:hover{
+    text-decoration: underline;
+  }
+  .login_container  .footer{
+    text-align: center;
+  }
+  .login_container .loginButtons{
+    display: flex;
+    gap: 30px;
+    margin: 30px auto;
+  }
+  .login_container .loginButtons .submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 50px;
+    color: #fff;
+    background: #0C0C0C;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .login_container .loginButtons .gray{
+    background: #EAEAEA;
+    color: #F5F7F8;
+    visibility: hidden;
+  }
+  .login_container .theWhole{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222831; 
+  }
+  .login_container .theWhole .firstineer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0C0C0C; 
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  .login_container .theWhole .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.login_container .theWhole .btn-light {
+    background-color: #0C0C0C; 
+    color: #fff; 
+}
+
+.login_container .theWhole .btn-light:hover {
+    background-color: #222831; 
+}
+
+.login_container .theWhole .btn i {
+    margin-right: 8px;
+    font-size: 20px; 
 }
