@@ -1,0 +1,52 @@
+{% include 'header.html' %}
+<section class="login_container" >
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="center">
+        <h1 class="log_col">Sign Up</h1>
+        <form method="post" action="">
+          {{ form.hidden_tag() }}
+          <div class="txt_field">
+            {{ form.Fname(class_= 'form-control')}}
+            <span></span>
+            <label>Full Name</label>
+          </div>
+        
+          <div class="txt_field">
+            {{ form.username(class_= 'form-control') }}
+            <span></span>
+            <label>Email Address</label>
+          </div>
+          <div class="txt_field">
+            {{ form.password(class_= 'form-control') }}
+            <span></span>
+            <label>Password</label>
+          </div>
+          <div class="txt_field">
+            {{ form.country(class_= 'form-control') }}
+            <span></span>
+            <label>Country</label>
+          </div>
+          
+          <input type="submit" value="SignUp" />
+          
+          <div class="signup_link">
+          
+          <a href="{{url_for('user.login')}}"><div>Already have an account?</div></a>
+            <div class='loginButtons'>
+                <div class="submit gray" >Sign Up</div>
+            </div>
+          </div>
+          <div class=" theWhole">
+            <div class=" firstineer">
+                <div class=" lastOne">
+                  <button type="button" class="btn btn-light" onClick={googleAuth}>
+                      <i class="fab fa-google"></i>
+                       Sign Up with Google
+                  </button>
+                </div>
+            </div>
+      </div>
+        </form>
+      </div>
+</section>
